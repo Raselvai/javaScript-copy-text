@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="app, landing, corporate, Creative, Html Template, Template">
+    <meta name="author" content="web-themes">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- title -->
+    <title>JavaScript Copy Text</title>
+
+    <!-- favicon -->
+    <!-- <link href="img/favicon.png" type="image/png" rel="icon"> -->
+
+    <!-- all css here -->
+    <link href="css/fontawesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  
+    <div class="copy_wrapper">
+        <div>
+            <h2>JavaScript Copy Text</h2>
+        </div>
+        <div class="copy_item">
+            <input type="text" value="Hello World" id="myInput">
+            <button onclick="myFunction()"><i class="fal fa-copy"></i>Copy Text</button>
+        </div>
+    </div>
+
+
+    <script>
+        
+        function myFunction() {
+            var copyText = document.getElementById("myInput");
+
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+
+            navigator.clipboard.writeText(copyText.value);
+
+            alert("Copied the text: " + copyText.value);
+        }
+
+    </script>
+</body>
+</html>
